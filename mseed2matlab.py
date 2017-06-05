@@ -27,7 +27,7 @@ parser.add_option("-c", "--components", dest="components", default="ZNE", type='
 parser.add_option("-i", "--input_file", dest="input", default="", type='string', help="Input mseed file")
 parser.add_option("-f", "--filter", dest="filter", default="", type='string', help='filter type (ex. B,0.1,4 or L,0.1)')
 parser.add_option("-e", "--event", dest="event", default="", type='string', help='event data: lat, lon, depth, time')
-parser.add_option("-o", "--output_file", dest="tmpfile", default="output.mat", type='string', help="Location of temporary matlab data file")
+parser.add_option("-o", "--output_file", dest="output", default="output.mat", type='string', help="Location of temporary matlab data file")
 
 (options, args) = parser.parse_args()
 
@@ -126,5 +126,5 @@ if event:
 	
 	
 	
-scipy.io.savemat(options.tmpfile, R)
+scipy.io.savemat(options.output, R)
 print(S)
