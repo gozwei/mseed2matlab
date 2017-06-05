@@ -20,7 +20,7 @@ def datetime2matlabdn(dt):
 
 parser = OptionParser()
 parser.add_option("-s", "--station", dest="station", type='string', help="Seismic station name")
-parser.add_option("-S", "--station-meta", dest="station_meta", default='0,0,0' type='string', help="Seismic station location (latitude, longitude, elevation)")
+parser.add_option("-S", "--station-meta", dest="station_meta", default='0,0,0', type='string', help="Seismic station location (latitude, longitude, elevation)")
 parser.add_option("-t", "--start-time", dest="start_time_str", type='string', help="Trace start time (ex. '2015-02-13 18:30:00')")
 parser.add_option("-d", "--duration", dest="duration", default=3600, type='int', help="Trace duration in seconds")
 parser.add_option("-c", "--components", dest="components", default="ZNE", type='string', help="Trace components (ex. 'Z' or 'NE' or 'ZNE'...)")
@@ -41,7 +41,7 @@ filter = options.filter
 event = options.event
 input = options.input
 
-[lat, lon, ele] = options.station_meta.spit(',')
+[lat, lon, ele] = options.station_meta.split(',')
 
 start_time = datetime.strptime(start_time_str, "%Y-%m-%d %H:%M:%S")
 end_time = start_time + timedelta(seconds=int(duration))
