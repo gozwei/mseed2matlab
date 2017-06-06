@@ -3,7 +3,9 @@ Python script for easy mseed to MATLAB conversion
 
 ## Features
 
-`mseed2matlab` allows convering parts of miniseed files into matlab data structures. Output can be filtered. Gaps are filled with `NaN`.
+`mseed2matlab` allows converting parts of miniseed files into matlab data structures. Output can be filtered. Gaps are filled with `NaN`.
+
+Script was created to meet my personal needs, but feel free to request new functionality. 
 
 ## dependencies
 
