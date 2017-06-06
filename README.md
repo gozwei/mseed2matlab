@@ -44,7 +44,9 @@ python3.5 mseed2matlab.py -s SUW -t '2015-04-22 13:55:00' -d 900 -c Z -i '201511
 ```
 
 Reading output in MATLAB:
-```>> load('SUW_highpass.mat')
+
+```
+>> load('SUW_highpass.mat')
 >> whos
   Name               Size            Bytes  Class     Attributes
 
@@ -60,4 +62,5 @@ Reading output in MATLAB:
 
 >> D = data.Z;
 >> T = linspace(time_start, time_end, length(data.Z));
->> plot(T,D)```
+>> plot(T,D)
+```
